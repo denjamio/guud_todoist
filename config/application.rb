@@ -28,8 +28,18 @@ module GuudTodoist
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :erb
+      g.test_framework  :test_unit
+      g.stylesheets     false
+      g.helper          false
+      g.jbuilder        false
+    end
+
+    config.time_zone = "Madrid"
+    config.i18n.default_locale = :es
   end
 end
