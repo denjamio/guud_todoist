@@ -1,9 +1,6 @@
 es:
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              blank: "obligatorio"
-              invalid: "inválido"
+  errors:
+    messages:
+      blank: "no puede estar en blanco"
+      taken: "ya existe"
+      invalid: "inválido"
