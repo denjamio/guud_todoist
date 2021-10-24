@@ -1,0 +1,40 @@
+.unauthorized {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+
+  @include respond(tab-port) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tab-port) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    color: var(--dark-indigo);
+    font-size: 2.5rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 2rem;
+    color: var(--indigo);
+    font-size: 1.75rem;
+  }
+
+  &__img {
+    width: 40rem;
+  }
+}

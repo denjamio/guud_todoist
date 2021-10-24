@@ -1,0 +1,27 @@
+<section class="not_logged">
+  <div>
+    <div class="not_logged__heading">
+      <span class="not_logged__title">Guud Todoist</span>
+      <span class="not_logged__subtitle">Y no te vuelvas a olvidar de nada</span>
+    </div>
+
+    <div>
+      <% if @user && @user.errors %>
+        <ul class="not_logged__error-list">
+          <% @user.errors.each do |error| %>
+            <li class="not_logged__error-item"><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+
+    <%= form_with url: login_path, class: "form" do |f| %>
+      <div class="field">
+        <%= f.email_field :email, placeholder: "Email *", class: "input rounded" %>
+        <%= f.label "Email", class: "label required" %>
+      </div>
+      <%= f.submit "Continuar", class: "btn basic rounded" %>
+    <% end %>
+  </div>
+  <%= image_tag "note_list.svg", class: "not_logged__img" %>
+</section>

@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  color: var(--indigo);
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: .75rem;
+  }
+}

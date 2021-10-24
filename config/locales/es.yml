@@ -1,0 +1,9 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "obligatorio"
+              invalid: "inválido"

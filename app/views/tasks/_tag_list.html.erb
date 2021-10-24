@@ -1,0 +1,7 @@
+<ul class="tags__list">
+  <li class="tags__item"><%= link_to "Todas las tareas", user_tasks_path(@current_user.id), class: "btn" %></li>
+  <% tags.each do |tag| %>
+    <li class="tags__item"><%= link_to "#{tag.name}", user_tasks_path(user_id: @current_user.id, tag_id: tag.id), class: "btn" %></li>
+  <% end %>
+</ul>
+

@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card__title"><%= task.title %></div>
+  <div>
+    <% task.tags.each do |tag| %>
+      <span class="tag"><%= link_to "#{tag.name}", user_tasks_path(user_id: @current_user.id, tag_id: tag.id), class: "btn" %></span>
+    <% end %>
+  </div>
+</div>

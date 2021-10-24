@@ -1,0 +1,13 @@
+<%= button_to "Salir", logout_path, class: "logout btn danger rounded" %>
+
+<%= content_for :sidebar do %>
+  <aside class="tags">
+    <%= render partial: 'tasks/tag_list', locals: {tags: @current_user.tags } %>
+  </aside>
+<% end %>
+
+<section class="tasks">
+  <%= render partial: "tasks/task", collection: @tasks %>
+</section>
+
+<%= render partial: "shared/empty", locals: { img: "empty_tasks", title: "No tienes tareas pendientes" } if @tasks.empty? %>
